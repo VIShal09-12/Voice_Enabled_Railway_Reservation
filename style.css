@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    color: #0055FF;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: #444;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ticket-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #0055FF;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.number {
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}

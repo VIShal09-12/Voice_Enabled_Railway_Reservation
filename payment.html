@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment gateway</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/payments.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="price">
+            <h1>Awesome, that's RS 500 !</h1>
+        </div>
+        <div class="card__container">
+            <div class="card">
+
+                <div class="row credit">
+                    <div class="left">
+                        <input id="cd" type="radio" name="payment" />
+                        <!-- <div class="radio"></div> -->
+                        <label for="cd">Debit/ Credit Card</label>
+                    </div>
+                    <div class="right">
+                        <img src="http://i66.tinypic.com/5knfq8.png" alt="visa" />
+                        <img src="http://i67.tinypic.com/14y4p1.png" alt="mastercard" />
+                        <img src="http://i63.tinypic.com/1572ot1.png" alt="amex" />
+                        <img src="http://i64.tinypic.com/2i92k4p.png" alt="maestro" />
+                    </div>
+                </div>
+                <div class="row cardholder">
+                    <div class="info">
+                        <label for="cardholdername">Name</label>
+                        <input placeholder="Card holder name" id="cardholdername" name="name" type="text" />
+                    </div>
+                </div>
+                <div class="row number">
+                    <div class="info">
+                        <label for="cardnumber">Card number</label>
+                        <input id="cardnumber" type="text" pattern="[0-9]{16,19}" maxlength="19" placeholder="8888-8888-8888-8888" />
+                    </div>
+                </div>
+                <div class="row details">
+                    <div class="left">
+                        <label for="expiry-date">Expiry</label>
+                        <input id="expiry-date" type="text">
+                    </div>
+                    <div class="left">
+                        <label for="cvv">CVC/CVV</label>
+                        <input id="cvv" type="text">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="button">
+            <a href="./thankyou.html">
+                <button type="submit"><i class="ion-locked"></i> Confirm and Pay</button>
+            </a>
+        </div>
+    </div>
+    <script src="./js/payments.js">
+    </script>
+</body>
+
+</html>

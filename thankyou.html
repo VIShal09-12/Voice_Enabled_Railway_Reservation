@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Choosing Us!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Thank You for Choosing Us!</h1>
+            <p class="subtitle">Your Ticket Unique Number is:</p>
+        </div>
+        <div class="ticket-number">
+            <p class="number" id="unique-id"></p>
+        </div>
+    </div>
+
+    <script>
+        // generate a random unique ID
+        function generateUniqueId() {
+            let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let id = '';
+            for (let i = 0; i < 10; i++) {
+                id += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return id;
+        }
+
+        // display the unique ID and speak it out loud
+        function showUniqueId() {
+            let uniqueId = generateUniqueId();
+            let uniqueIdElement = document.getElementById('unique-id');
+            uniqueIdElement.textContent = uniqueId;
+
+            let message = new SpeechSynthesisUtterance(uniqueId);
+            speechSynthesis.speak(message);
+        }
+
+        // call the showUniqueId function when the page loads
+        window.onload = showUniqueId;
+    </script>
+</body>
+
+</html>
